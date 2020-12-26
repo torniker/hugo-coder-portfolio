@@ -8,7 +8,7 @@
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
     <meta name="description" content="{{ if .IsPage }}{{ .Site.BaseURL }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
-    
+
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:title" content="{{ block "og-title" . }}{{ .Site.Title }}{{ end }}">
     <meta property="og:description" content="{{ if .IsPage }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
@@ -62,6 +62,8 @@
     </main>
 
     {{ template "_internal/google_analytics.html" . }}
+  <script src="https://unpkg.com/@codersrank/activity@0.9.13/codersrank-activity.min.js"></script>
+  <script src="https://unpkg.com/@codersrank/summary@0.9.10/codersrank-summary.min.js"></script>
 
   <script src="{{ "js/app.js" | absURL }}"></script>
   {{ with .Site.Params.fixedbarContentAfter }}

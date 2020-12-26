@@ -1,7 +1,7 @@
 <section class="container centered">
   <div class="about">
     {{ with .Site.Params.avatarurl }}
-      <div class="avatar"><img src="{{ . | absURL }}" alt="avatar"></div>
+    <div class="avatar"><img src="{{ . | absURL }}" alt="avatar" /></div>
     {{ end }}
     <h1>{{ .Site.Params.author }}</h1>
     <h2>{{ .Site.Params.info }}</h2>
@@ -12,5 +12,22 @@
       {{ end }}
     </ul>
     {{ end }}
+    <!-- <div style="padding: 16px 0">
+      <codersrank-summary
+        username="torniker"
+        branding="false"
+        show-avatar="false"
+        show-header="false"
+      ></codersrank-summary>
+    </div> -->
+    <div style="padding: 16px 0">
+      <codersrank-activity
+        username="torniker"
+        branding="false"
+        labels="true"
+        legend="false"
+        tooltip="true"
+      ></codersrank-activity>
+    </div>
   </div>
 </section>
